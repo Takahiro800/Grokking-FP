@@ -22,10 +22,17 @@ case class TvShow(title: String, start: Int, end: Int) {
 
     TvShow(name, yearStart, yearEnd)
   }
-}
 
-val rawShows: List[String] = List(
-  "Breaking Bad (2008-2013)",
-  "The Wire (2002-2008)",
-  "Mad Men (2007-2015)"
-)
+  val rawShows: List[String] = List(
+    "Breaking Bad (2008-2013)",
+    "The Wire (2002-2008)",
+    "Mad Men (2007-2015)"
+  )
+
+  parseShows(rawShows)
+
+  // 6.10
+  val invalidRawShow = "Breaking Bad, 2008-2013"
+  parseShow(invalidRawShow)
+
+}
